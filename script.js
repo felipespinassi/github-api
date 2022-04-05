@@ -51,8 +51,9 @@ function getRepos(){
     input.innerHTML = ''
     foto.innerHTML = `
 
+    
+    <h1> GitHub Api </h1>
     <h1> ${data.name} </h1> 
-     
     <img src=${data.avatar_url}> </img>
    
 
