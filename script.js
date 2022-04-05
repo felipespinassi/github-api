@@ -9,6 +9,7 @@ const div = document.querySelector('div')
 buttonSubmit.addEventListener('click', getRepos)
 
 function getRepos(){
+  ul.innerHTML = ''
 
   div.innerHTML = ''
 
@@ -43,12 +44,15 @@ function getRepos(){
     })
 
     fetch('https://api.github.com/users/'+ userName)
+
+    
+
   .then(async res =>{
     const data = await res.json()
 
     let foto = document.createElement('div')
 
-    input.innerHTML = ''
+    
     foto.innerHTML = `
 
     
