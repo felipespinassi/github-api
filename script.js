@@ -5,13 +5,10 @@ const ul = document.querySelector('ul')
 const div = document.querySelector('div')
 
 
-function getUsers(){
+function getRepos(){
    fetch("https://api.github.com/users/felipespinassi/repos")
   .then(async res => {
     const data =  await res.json()
-
-
-
     
     data.map(item =>{
 
@@ -24,15 +21,13 @@ function getUsers(){
       `
       ul.appendChild(li)
 
-
-
     })
   }) 
   .catch(error => console.log(error));
 }
 
 
-function getImg(){
+function getData(){
   fetch('https://api.github.com/users/felipespinassi')
   .then(async res =>{
     const data = await res.json()
@@ -40,17 +35,21 @@ function getImg(){
     let foto = document.createElement('div')
     foto.innerHTML = `
     
-    <h1> GitHub Api </h1>
+    <h1> GitHub Api </h1> 
+    <h1> ${data.name} </h1> 
     <img src=${data.avatar_url}> </img>
+   
+   
     
 
     `
+
     div.appendChild(foto)
   
   })
 }
 
 
-getImg()
+getData()
 
-getUsers()
+getRepos()

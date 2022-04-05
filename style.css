@@ -18,6 +18,25 @@ div{
     margin: 2rem 0;
 }
 
+ .div-input{
+    display: flex;
+    justify-content: center;
+
+}
+input{
+    
+    border-radius: 20px;
+    border-style: none;
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    border-color: #030518;
+}
+
+button{
+    padding: 2rem;
+}
+
  div div{
     display: flex;
     justify-content: space-around;
@@ -66,12 +85,14 @@ img{
         grid-template-columns: 1fr 1fr ;
         
     }
-    h1{
-        font-size: 1.5rem;
-    }
+   
 
-    li{
-        font-size: rem;
+   h1{
+       margin: 1.5rem;
+   }
+
+    div div {
+        flex-direction: column-reverse;
     }
     
 }
