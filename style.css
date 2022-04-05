@@ -103,7 +103,7 @@ img{
    }
 
     div div {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     
 }
