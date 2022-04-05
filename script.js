@@ -8,71 +8,63 @@ const div = document.querySelector('div')
 
 buttonSubmit.addEventListener('click', getRepos)
 
-function getRepos(){
+function getRepos() {
   ul.innerHTML = ''
 
   div.innerHTML = ''
 
-  let userName =  input.value
+  let userName = input.value
 
-  userName = userName.replace (' ', '')
-  userName = userName.replace ('.', '')
+  userName = userName.replace(' ', '')
+  userName = userName.replace('.', '')
   userName = userName.trim()
 
 
-   fetch("https://api.github.com/users/" + userName + "/repos")
-  .then(async res => {
-    const data =  await res.json()
-    
-    
+  fetch("https://api.github.com/users/" + userName + "/repos")
+    .then(async res => {
+      const data = await res.json()
 
-    data.map(item =>{
-      
 
-      let li = document.createElement('li')
+      data.map(item => {
 
-      
-     
 
-      li.innerHTML = `
+        let li = document.createElement('li')
+
+
+
+        li.innerHTML = `
       <strong> ${item.name.toUpperCase()} </strong>
       <a href= ${item.html_url}> URL: ${item.html_url} </a>
       `
-      ul.appendChild(li)
+        ul.appendChild(li)
 
-      
-    })
 
-    fetch('https://api.github.com/users/'+ userName)
+      })
 
-    
+      fetch('https://api.github.com/users/' + userName)
 
-  .then(async res =>{
-    const data = await res.json()
+        .then(async res => {
+          const data = await res.json()
 
-    let foto = document.createElement('div')
+          let content = document.createElement('div')
 
-    
-    foto.innerHTML = `
 
-    
+          content.innerHTML = `
+
     <h1> GitHub Api </h1>
     <h1> ${data.name} </h1> 
     <img src=${data.avatar_url}> </img>
-   
 
     `
 
-    div.appendChild(foto)
-  
-  })
-  }) 
-  .catch(error => console.log(error));
+          div.appendChild(content)
 
-  input.innerText = ''
+        })
+    })
+    .catch(error => console.log(error));
 }
 
 
 
 
-  
+
