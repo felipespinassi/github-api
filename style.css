@@ -20,7 +20,11 @@ div{
 
  .div-input{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 2rem;
+   
 
 }
 input{
@@ -34,7 +38,10 @@ input{
 }
 
 button{
-    padding: 2rem;
+    padding: 1rem 5rem;
+    border-radius: 20px;
+    border-style: none;
+    
 }
 
  div div{
@@ -104,6 +111,13 @@ img{
     }
     h1{
         font-size: 2rem;
+    }
+    input{
+        width:100%;
+    }
+    button{
+        padding: 1rem 2rem;
+
     }
 
     
