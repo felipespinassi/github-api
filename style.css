@@ -12,7 +12,8 @@ body{
     background-color: #030518;
     color: white;
     word-break: break-all;
-    margin: 2rem;
+    margin: 4rem 2rem;
+    
 }
 
 .title{
@@ -20,7 +21,9 @@ body{
 }
 div{
     margin: 2rem 0;
+    
 }
+
 
  .div-input{
     display: flex;
@@ -46,6 +49,13 @@ button{
     border-radius: 20px;
     border-style: none;
     
+    
+}
+
+button:hover{
+    transform: 1s;
+    filter: brightness(0.5);
+    cursor: pointer;
 }
 
  div div{
@@ -63,13 +73,22 @@ ul{
     grid-template-columns: 1fr 1fr 1fr;
     gap:2rem ;
     
+   
+    
 }
+
 
 li{
     display: flex;
     flex-direction: column;
     margin: 20px auto;
     font-size: 1.5rem;
+    
+}
+
+li:hover{
+    filter: brightness(0.5);
+    transition: 1s;
 }
 
 li a{
